@@ -21,6 +21,8 @@ set path = (/sbin /bin /usr/sbin /usr/bin /usr/games /usr/local/sbin /usr/local/
 setenv	EDITOR	vim
 setenv	PAGER	less
 setenv	BLOCKSIZE	K
+setenv	CLICOLOR	1
+setenv	LSCOLORS	GxFxCxdxBxeggdabagacad
 
 if ($?prompt) then
 	# An interactive shell -- set some stuff up
