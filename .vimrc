@@ -3,7 +3,7 @@ set nu
 set ru
 set list
 set title
-"set expandtab
+set expandtab
 set mouse=a
 set tabstop=4
 set shiftwidth=4
@@ -11,7 +11,7 @@ set softtabstop=4
 set scrolloff=3
 set encoding=utf-8
 "set encoding=big5
-set listchars=tab:\|\ ",eol:_
+set listchars=tab:\|\ ,trail:.",eol:_
 set backspace=indent,eol,start
 set fileencodings=utf8,big5
     "set cursorline
