@@ -37,6 +37,7 @@ if ($?prompt) then
 	set autoexpand
 	set autorehash
 	set mail = (/var/mail/$USER)
+	set color
 	if ( $?tcsh ) then
 		bindkey "^W" backward-delete-word
 		bindkey -k up history-search-backward
