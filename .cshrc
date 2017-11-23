@@ -51,10 +51,14 @@ if ($?prompt) then
 	endif
 
 endif
-setenv LC_ALL zh_TW.UTF-8
-setenv LANG zh_TW.UTF-8
-setenv LC_CTYPE zh_TW.UTF-8
+setenv LC_ALL en_US.UTF-8
+setenv LANG en_US.UTF-8
+setenv LC_CTYPE en_US.UTF-8
 setenv MM_CHARSET UTF-8
+#setenv LC_ALL zh_TW.UTF-8
+#setenv LANG zh_TW.UTF-8
+#setenv LC_CTYPE zh_TW.UTF-8
+#setenv MM_CHARSET UTF-8
 #setenv LC_ALL zh_TW.big5
 #setenv LANG zh_TW.big5
 #setenv LC_CTYPE zh_TW.big5
