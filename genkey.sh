@@ -12,6 +12,7 @@ openssl req -new -newkey rsa:2048 -nodes -out cs.csr -keyout cs.key
 
 # verify key
 openssl rsa -in ssl.key -check
+openssl rsa -in ssl.key -pubout
 # verify csr
 openssl req -text -noout -verify -in ssl.csr
 # verify crt
