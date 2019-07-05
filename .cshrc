@@ -51,6 +51,7 @@ if ($?prompt) then
 	endif
 
 endif
+setenv TERM xterm-256color
 setenv LC_ALL en_US.UTF-8
 setenv LANG en_US.UTF-8
 setenv LC_CTYPE en_US.UTF-8
