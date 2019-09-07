@@ -17,3 +17,7 @@ openssl rsa -in ssl.key -pubout
 openssl req -text -noout -verify -in ssl.csr
 # verify crt
 openssl x509 -in ssl.crt -noout -text
+
+# sign and verify file
+openssl dgst -sha256 -sign rsa.key -out file.sig  file
+openssl dgst -sha256 -verify rsa.pub -signature file.sig  file
