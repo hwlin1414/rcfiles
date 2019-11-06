@@ -7,8 +7,14 @@ openssl x509 -req -days 365 -signkey ssl.key -in ssl.csr -out ssl.crt
 # sign from ca
 openssl x509 -req -in ssl.csr -CA rootCA.crt -CAkey rootCA.key -CAcreateserial -out ssl.crt -days 365 -sha256
 
-# gen key and csr
+# one step gen key and csr
 openssl req -new -newkey rsa:2048 -nodes -out cs.csr -keyout cs.key
+
+# one step gen key and crt
+openssl req -new -nodes -utf8 -sha256 -days 365 -batch -x509 -newkey rsa:2048 -out ssl.crt -keyout ssl.key
+
+# gen pubkey from privkey
+openssl rsa -in ssl.key -out ssl.pub -pubout
 
 # verify key
 openssl rsa -in ssl.key -check
