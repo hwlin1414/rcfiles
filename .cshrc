@@ -64,3 +64,5 @@ setenv MM_CHARSET UTF-8
 #setenv LANG zh_TW.big5
 #setenv LC_CTYPE zh_TW.big5
 #setenv MM_CHARSET big5
+
+alias bless     "iconv -f big5 -t utf-8 \!:1 | less -r"
