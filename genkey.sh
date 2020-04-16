@@ -27,3 +27,32 @@ openssl x509 -in ssl.crt -noout -text
 # sign and verify file
 openssl dgst -sha256 -sign rsa.key -out file.sig  file
 openssl dgst -sha256 -verify rsa.pub -signature file.sig  file
+
+# extension serverAuth by config
+openssl req -x509 -config cert_config -extensions 'my server exts' -nodes \
+            -days 365 -newkey rsa:4096 -keyout myserver.key -out myserver.crt
+#[ req ]
+#prompt             = no
+#distinguished_name = my dn
+#
+#[ my dn ]
+## The bare minimum is probably a commonName
+#            commonName = secure.example.com
+#           countryName = XX
+#          localityName = Fun Land
+#      organizationName = MyCo LLC LTD INC (d.b.a. OurCo)
+#organizationalUnitName = SSL Dept.
+#   stateOrProvinceName = YY
+#          emailAddress = ssl-admin@example.com
+#                  name = John Doe
+#               surname = Doe
+#             givenName = John
+#              initials = JXD
+#           dnQualifier = some
+#
+#[ my server exts ]
+#extendedKeyUsage = 1.3.6.1.5.5.7.3.1
+## 1.3.6.1.5.5.7.3.1 can also be spelled serverAuth:
+## extendedKeyUsage = serverAuth
+#
+## see x509v3_config for other extensions
