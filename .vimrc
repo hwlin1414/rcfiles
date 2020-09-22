@@ -16,11 +16,15 @@ set backspace=indent,eol,start
 set fileencodings=utf8,big5
     "set cursorline
 imap <C-[>[1~ <C-o>^
+imap <C-[>[H ^
+imap <C-[>[F $
 imap <F9> <C-o><C-w><
 imap <F10> <C-o><C-w>+
 imap <F11> <C-o><C-w>-
 imap <F12> <C-o><C-w>>
 map <C-[>[1~ ^
+map <C-[>[H ^
+map <C-[>[F $
 map <F9> <C-w><
 map <F10> <C-w>+
 map <F11> <C-w>-
