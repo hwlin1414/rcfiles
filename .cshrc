@@ -22,7 +22,7 @@ setenv	EDITOR	vim
 setenv	PAGER	less
 setenv	BLOCKSIZE	K
 setenv	CLICOLOR	1
-setenv	LSCOLORS	GxFxCxdxBxeggdabagacad
+setenv	LSCOLORS	GxFxCxdxBxegdxabagacad
 
 if ($?prompt) then
 	# An interactive shell -- set some stuff up
