@@ -1,0 +1,16 @@
+[core]
+    editor = vim
+#    hooksPath = .githooks
+#[color "diff"]
+#    old = cyan
+#[log]
+#       decorate = short
+#[comment]
+#       template = /home/hwlinv/.git-template
+[alias]
+    ls = log --stat -n 40
+    df = difftool --tool=vimdiff
+    brief = log --date=format-local:'%y-%m-%d %H:%M:%S' --pretty=format:'<%ad> %h - [%C(yellow)%<(9,trunc)%an%Creset]: %s'
+
+#    branch-name = "!git rev-parse --abbrev-ref HEAD"
+#    push-review = "!git push origin HEAD:refs/for/$(git branch-name)"
